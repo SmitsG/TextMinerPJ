@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<!-- This will display the title in the browser and css is used for the layout -->
+<head>
+    <title>Download</title>
+    <link rel="stylesheet" type="text/css" href="/static/Test.css">
+</head>
+
+<body>
+
+<!-- This is the code to visualise the menu-->
+<div class="topnav" id="myTopnav">
+    <a href="/">Home</a>
+    <a href="/textminen">Textminen</a>
+    <a href="/visualisatie">Visualisatie</a>
+    <a href='/download'>Download</a>
+</div>
+
+<!-- This codes should be able to download the Excel file. -->
+
+<form action="/excel2" method="POST">
+    <input type="submit" value="Download">
+</form>
+
+
+</body>
+</html>

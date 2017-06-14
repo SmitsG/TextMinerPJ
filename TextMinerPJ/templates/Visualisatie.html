@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<!-- This will display the title in the browser and css is used for the layout -->
+<head>
+    <title>{{ title }} - image</title>
+    <link rel="stylesheet" type="text/css" href="/static/Test.css">
+
+</head>
+<body>
+
+<!-- This is the code to visualise the menu-->
+<div class="topnav" id="myTopnav">
+    <a href="/">Home</a>
+    <a href="/textminen">Textminen</a>
+    <a href="/visualisatie">Visualisatie</a>
+    <a href='/download'>Download</a>
+</div>
+
+
+<!-- Refresh the WordCloud image when the user clicks on the 'Refresh' button-->
+<FORM>
+    <INPUT TYPE="button" onClick="history.go(0)" VALUE="Refresh">
+</FORM>
+
+<!-- Displays the WordCloud image-->
+<img src="{{ url_for('fig', cropzonekey = title) }}" alt="Image Placeholder" height="600" width="1300">
+
+
+</body>
+</html>

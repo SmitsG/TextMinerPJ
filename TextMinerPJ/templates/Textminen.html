@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<!-- This will display the title in the browser and css is used for the layout -->
+<head>
+    <title>Textminen</title>
+    <link rel="stylesheet" type="text/css" href="/static/Test.css">
+</head>
+<body>
+
+<!-- This is the code to visualise the menu-->
+<div class="topnav" id="myTopnav">
+    <a href="/">Home</a>
+    <a href="/textminen">Textminen</a>
+    <a href="/visualisatie">Visualisatie</a>
+    <a href='/download'>Download</a>
+</div>
+
+<!-- User guide -->
+<p>Op deze pagina kunt u een zoekopdracht samenstellen voor het textminen. Hieronder vindt u twee zoekbalken. De
+    bovenste zoekbalk, genaamd "Trefwoorden", kunt u gebruiken om trefwoorden op te geven voor het ophalen van de
+    abstracts uit PubMed en het textminen. De tweede zoekbalk, genaamd "Maximum aantal abstracts", kunt u gebruiken voor
+    het instellen van het maximum aantal abstracts dat uit PubMed wordt opgehaald.
+
+</p>
+
+<!-- The user can give the searchWords and is able to get a maximum number of abstracts.
+The maximum number of abstracts is handy for our demonstration, or if you don't want do wait a long time on the results
+However, it will get less accurate results. -->
+<form action="/get_search_param" method="POST">
+    Trefwoorden:<br>
+    <input type="text" name="searchWords"><br>
+    Maximum aantal abstracts:<br>
+    <input type="number" name="maxNumberAbstracts"><br>
+    <input type="submit" value="Submit">
+</form>
+
+</body>
+</html> 
